@@ -1,26 +1,26 @@
 class Aisw < Formula
   desc "AI and coding agent account manager and account switcher"
   homepage "https://github.com/burakdede/aisw"
-  version "0.3.4"
+  version "0.3.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/burakdede/aisw/releases/download/v0.3.4/aisw-aarch64-apple-darwin"
-      sha256 "b57f9d356019056b59d074b4ce08fa0cbf2eb78d5bfb28ca19e7e9d49c87946d"
+      url "https://github.com/burakdede/aisw/releases/download/v0.3.5/aisw-aarch64-apple-darwin"
+      sha256 "9fbc640fbe135e3c75d1ad9f7e781dc80e925fca35d016bf2c1747d5be5fd9c0"
     else
-      url "https://github.com/burakdede/aisw/releases/download/v0.3.4/aisw-x86_64-apple-darwin"
-      sha256 "aac9b446937dbd0cd010344a42619d096cc3a915c9c08e329a215a0d4838aa1f"
+      url "https://github.com/burakdede/aisw/releases/download/v0.3.5/aisw-x86_64-apple-darwin"
+      sha256 "9604a81b1dd71bd31f6d1aa8f5c154dd2f8bc33246e5bba7f83fcf443249d66d"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/burakdede/aisw/releases/download/v0.3.4/aisw-aarch64-unknown-linux-gnu"
-      sha256 "6cc7062deb09697f5e093bec60ee67c451bc24887e19f5cacfa9327064726f6d"
+      url "https://github.com/burakdede/aisw/releases/download/v0.3.5/aisw-aarch64-unknown-linux-gnu"
+      sha256 "e391e806d7acf3ecd80f69f71808709ff41839f79e9fa00082f333d5501d4e36"
     else
-      url "https://github.com/burakdede/aisw/releases/download/v0.3.4/aisw-x86_64-unknown-linux-gnu"
-      sha256 "ad9f2bdc309c8ad7ce3cf5475eed911d96f3999798d54a45214054eaa8c26c89"
+      url "https://github.com/burakdede/aisw/releases/download/v0.3.5/aisw-x86_64-unknown-linux-gnu"
+      sha256 "bab7b68d7b3e6165079ff0860d0afd4d89859f28dc055395090780e741bf30e4"
     end
   end
 
