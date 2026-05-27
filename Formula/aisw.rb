@@ -15,17 +15,18 @@ class Aisw < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm?
-      url "https://github.com/burakdede/aisw/releases/download/v0.3.5/aisw-aarch64-unknown-linux-gnu"
-      sha256 "e391e806d7acf3ecd80f69f71808709ff41839f79e9fa00082f333d5501d4e36"
-    else
-      url "https://github.com/burakdede/aisw/releases/download/v0.3.5/aisw-x86_64-unknown-linux-gnu"
-      sha256 "bab7b68d7b3e6165079ff0860d0afd4d89859f28dc055395090780e741bf30e4"
-    end
+    url "https://static.crates.io/crates/aisw/aisw-0.3.5.crate"
+    sha256 "2d541f7372b222789a524eaae311150631ea35e042951a21238d0e78031f431e"
+
+    depends_on "rust" => :build
   end
 
   def install
-    bin.install Dir["aisw-*"].first => "aisw"
+    if OS.linux?
+      system "cargo", "install", "--locked", "--root", prefix, "--path", "."
+    else
+      bin.install Dir["aisw-*"].first => "aisw"
+    end
   end
 
   test do
